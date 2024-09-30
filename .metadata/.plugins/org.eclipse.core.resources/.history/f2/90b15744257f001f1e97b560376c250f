@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+package es.indra.models;
+
+/**
+ * 
+ */
+public class Pedido {
+
+}

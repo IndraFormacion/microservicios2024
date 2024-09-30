@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package es.indra.services;
+
+import es.indra.models.Producto;
+
+/**
+ * 
+ */
+public interface IPedidoService {
+	Producto crearPedido(Long id, int cantidad);
+}

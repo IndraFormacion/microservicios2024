@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+package es.indra.persistence;
+
+/**
+ * 
+ */
+public interface ProductosDAO {
+
+}
