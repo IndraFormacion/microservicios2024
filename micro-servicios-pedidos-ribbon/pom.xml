@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>es.indra</groupId>
-	<artifactId>micro-servicios-pedidos</artifactId>
+	<artifactId>micro-servicios-pedidos-ribbon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>micro-servicios-pedidos</name>
 	<description>Demo project for Spring Boot</description>
