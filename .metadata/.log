@@ -2996,3 +2996,9 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-01 13:01:51.975
 !MESSAGE Classpath changed for project: micro-servicios-pedidos-eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-01 13:06:17.614
+!MESSAGE Classpath changed for project: micro-servicios-productos-eureka
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-01 13:06:30.511
+!MESSAGE Classpath changed for project: micro-servicios-productos-eureka
