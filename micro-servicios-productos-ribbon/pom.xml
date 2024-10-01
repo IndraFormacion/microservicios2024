@@ -11,7 +11,7 @@
 	<groupId>es.indra</groupId>
 	<artifactId>micro-servicios-productos-ribbon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>micro-servicios-productos</name>
+	<name>micro-servicios-productos-ribbon</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<properties>
