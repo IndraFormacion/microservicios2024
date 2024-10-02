@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>es.indra</groupId>
-	<artifactId>micro-servicios-productos-hystrix</artifactId>
+	<artifactId>micro-servicios-productos-resilience4J</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>micro-servicios-productos-hystrix</name>
+	<name>micro-servicios-productos-resilience4J</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<properties>

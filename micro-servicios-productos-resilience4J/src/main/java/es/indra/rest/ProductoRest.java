@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import es.indra.models.Producto;
 import es.indra.services.IProductoServices;
-import net.bytebuddy.asm.Advice.Return;
 
 /**
  * 
@@ -63,7 +62,7 @@ public class ProductoRest {
 		}
 		//En Hystrix el timeout es de 1 segundo
 		//lo podemos ampliar a 15 segundos Vamos apararlo 10 segundos
-		Thread.sleep(10_000);
+		//Thread.sleep(10_000);
 		
 		producto.setPort(port);
 		return producto;

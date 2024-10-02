@@ -6,11 +6,11 @@ package es.indra.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import es.indra.clients.ProductosClienteRest;
 import es.indra.models.Pedido;
 import es.indra.models.Producto;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 /**
  * 
@@ -23,7 +23,8 @@ public class PedidoServiceImpl implements IPedidoService{
 
 	//En el caso de recibir una excepcion llamamos al metodo alternativo manejarError
 	@Override
-	@HystrixCommand(fallbackMethod = "manejarError")
+	//@HystrixCommand(fallbackMethod = "manejarError")
+	@CircuitBreaker(name="pedidos",fallbackMethod = "manejarError")
 	public Pedido crearPedido(Long id, int cantidad) {
 		Producto producto = clienteFeign.buscar(id);
 		return new Pedido(producto, cantidad);
