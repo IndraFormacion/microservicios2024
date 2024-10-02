@@ -26,7 +26,7 @@ public class CarritoREST {
 	public Carrito crear(@PathVariable String usuario) {
 		return service.crear(usuario);
 	}
-	// http://localhost:8003/agregarPedidoidad/16/usuario/usuario1
+	// http://localhost:8003/agregarPedido/2/cantidad/16/usuario/usuario1
 	@PutMapping("/agregarPedido/{id}/cantidad/{cantidad}/usuario/{usuario}")
 	public Carrito agregarPedido(@PathVariable Long id, @PathVariable Integer cantidad, @PathVariable String usuario) {
 		return service.agregarPedido(id, cantidad, usuario);

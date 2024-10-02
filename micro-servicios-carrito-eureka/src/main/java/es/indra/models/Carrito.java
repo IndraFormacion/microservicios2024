@@ -4,6 +4,7 @@
 package es.indra.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -15,7 +16,7 @@ public class Carrito implements Serializable{
 	@Id
 	private String id;
 	private String usuario;
-	private List<Pedido> contenido;
+	private List<Pedido> contenido=new ArrayList<>();
 	private double importe;
 	
 	
