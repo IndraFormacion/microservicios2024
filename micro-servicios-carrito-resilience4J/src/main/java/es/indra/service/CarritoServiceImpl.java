@@ -26,10 +26,15 @@ public class CarritoServiceImpl implements CarritoService{
 	@Override
 	public Carrito crear(String usuario) {
 		// TODO Auto-generated method stub
-		Carrito carrito = new Carrito();
-		carrito.setUsuario(usuario);
+		Carrito carrito = consultar(usuario);
+		if(carrito==null) {
+			carrito= new Carrito();
+			carrito.setUsuario(usuario);
+			carrito= dao.save(carrito);
+		}
 		
-		return dao.save(carrito);
+		
+		return carrito;
 	}
 
 	@Override

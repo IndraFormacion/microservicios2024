@@ -68,7 +68,6 @@ INDEX VERSION 1.134+C:\Users\aocarballo\Documents\IndraMicroservicios\.metadata\
 1889562632.index
 2432471128.index
 763747750.index
-1530156497.index
 1065345409.index
 828275308.index
 2190878710.index
