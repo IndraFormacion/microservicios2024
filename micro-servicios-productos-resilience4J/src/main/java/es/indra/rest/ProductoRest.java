@@ -3,8 +3,11 @@
  */
 package es.indra.rest;
 
+import java.net.Authenticator.RequestorType;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,11 +27,16 @@ public class ProductoRest {
 	@Autowired
 	private IProductoServices productoServices;
 	
+	
+	
 	//Capturar el puerto por el que entra la peticion
-	@Value("${server.port}")
-	private Integer port;
+	//Con puerto dinamico esto no funciona utilizamos HttpServleyRequest
+	//@Value("${server.port}")
+	//private Integer port;
 	
 	//http://localhost:8001/listar
+	@Autowired
+	private HttpServletRequest request;
 	@GetMapping("/listar")
 	public List<Producto> listar(){
 		 
@@ -44,7 +52,8 @@ public class ProductoRest {
 		return productoServices.consultarTodos()
 				.stream()
 				.map(prod -> {
-					prod.setPort(port);
+					//prod.setPort(port);
+					prod.setPort(request.getLocalPort());
 					return prod;
 				})
 				.collect(Collectors.toList());
@@ -62,9 +71,13 @@ public class ProductoRest {
 		}
 		//En Hystrix el timeout es de 1 segundo
 		//lo podemos ampliar a 15 segundos Vamos apararlo 10 segundos
-		//Thread.sleep(10_000);
-		
-		producto.setPort(port);
+		/*if(id.equals(1L)) {
+			Thread.sleep(3_000);
+		}
+		if(id.equals(2L)) {
+			Thread.sleep(10_000);
+		}*/
+		producto.setPort(request.getLocalPort());
 		return producto;
 	}
 }
